@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(serverConnection.getInputStream()));
             String line = "";
             result = "";
+
             Log.d("ERROR","pokus");
             while ((line = bufferedReader.readLine()) != null) {
                 result += line;
