@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cz.kubahejda.eet.MainActivity">
+
+    <TextView
+        android:text="Uživatelské jméno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="mopi"
+        android:ems="10"
+        android:id="@+id/textFieldUserName"
+        style="@style/Widget.AppCompat.EditText"
+        android:selectAllOnFocus="true" />
+
+    <TextView
+        android:text="Heslo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/textFieldPassword"
+        android:text="lopi"
+        android:selectAllOnFocus="true" />
+
+    <Button
+        android:text="Přihlásit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:onClick="onButtonLogInClicked" />
+</LinearLayout>

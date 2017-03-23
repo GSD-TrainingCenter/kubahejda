@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="EetDBServer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="EetDBServer-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="EetDBServer:war exploded" />
+    </root>
+  </artifact>
+</component>
