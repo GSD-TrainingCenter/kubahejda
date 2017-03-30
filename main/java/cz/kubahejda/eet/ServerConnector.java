@@ -14,7 +14,7 @@ import java.net.URLEncoder;
  */
 
 public class ServerConnector {
-    public static final String serverUrl = "http://192.168.0.101";
+    public static final String serverUrl = "http://10.60.2.207";
 
     public static String getResponseFromServer(String location) {
         String result = "";
@@ -32,7 +32,6 @@ public class ServerConnector {
             String line = "";
             result = "";
 
-            Log.d("ERROR","pokus");
             while ((line = bufferedReader.readLine()) != null) {
                 result += line;
             }
