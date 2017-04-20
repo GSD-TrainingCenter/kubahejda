@@ -1,6 +1,8 @@
 package cz.kubahejda.eet.services;
 
 
+import com.google.common.base.Preconditions;
+import cz.kubahejda.eet.model.Registration;
 import cz.kubahejda.eet.model.User;
 import cz.kubahejda.eet.repository.UserRepository;
 import org.slf4j.Logger;
@@ -14,6 +16,7 @@ import java.security.Key;
 import java.util.List;
 
 import org.apache.commons.codec.binary.Hex;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by Kuba on 23.3.2017.
@@ -103,4 +106,12 @@ public class DBUserService implements UserService {
     }
 
 
+    @Transactional
+    public Registration registration(String username, String password, Long companyId, String email, String companyName, String vatId) {
+        User u = repository.create(username,password,companyId,email,companyName,vatId);
+        if (u == null)
+            return new Registration(1, null);
+        else
+            return new Registration(0, u.getEmail());
+    }
 }

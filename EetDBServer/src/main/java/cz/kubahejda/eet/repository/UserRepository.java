@@ -10,4 +10,6 @@ import java.util.List;
 public interface UserRepository {
     boolean authentificate(final String username, final String password);
     List<User> getInfo(String username);
+    User getInfo(Long id);
+    User create(String username, String password, Long companyId, String email, String companyName, String vatId);
 }

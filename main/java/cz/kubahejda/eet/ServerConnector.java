@@ -14,7 +14,7 @@ import java.net.URLEncoder;
  */
 
 public class ServerConnector {
-    public static final String serverUrl = "http://10.60.2.207";
+    public static final String serverUrl = "http://10.60.2.223";
 
     public static String getResponseFromServer(String location) {
         String result = "";

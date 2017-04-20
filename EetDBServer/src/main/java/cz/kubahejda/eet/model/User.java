@@ -19,16 +19,27 @@ public class User {
     private Long companyId;
     @JsonView({Views.Public.class})
     private String vatId;
+    @JsonView({Views.Public.class})
+    private String email;
 
     public User () {}
 
-    public User(String id, String username, String password, String companyName, Long companyId, String vatId) {
+    public User(String id, String username, String password, String companyName, Long companyId, String vatId, String email) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.companyName = companyName;
         this.companyId = companyId;
         this.vatId = vatId;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getCompanyName() {
@@ -86,6 +97,7 @@ public class User {
         sb.append(", companyName='").append(companyName).append('\'');
         sb.append(", companyID='").append(companyId.toString()).append('\'');
         sb.append(", vatID='").append(vatId).append('\'');
+        sb.append(", email='").append(email).append('\'');
         sb.append('}');
         return sb.toString();
     }
